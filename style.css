@@ -1,106 +1,104 @@
-
 /* Configurações gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f5f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #0a6c73;
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
+  background-color: #0a6c73;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
 }
 
 header h1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Conteúdo principal */
 .container {
-    max-width: 650px;
-    margin: 40px auto;
-    padding: 0 20px;
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 /* Cartões */
 .card {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .card h2 {
-    margin-bottom: 20px;
-    color: #0a6c73;
+  margin-bottom: 20px;
+  color: #0a6c73;
 }
 
 /* Formulário */
 form {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 input {
-    flex: 1;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    outline: none;
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
 }
 
 button {
-    background-color: #0a6c73;
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 6px;
-    cursor: pointer;
+  background-color: #0a6c73;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #084f55;
+  background-color: #084f55;
 }
 
 /* Lista */
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .status {
-    background-color: #fff0c2;
-    color: #946200;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
+  background-color: #fff0c2;
+  color: #946200;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
 }
 
 .concluida {
-    background-color: #d1fae5;
-    color: #087443;
+  background-color: #d1fae5;
+  color: #087443;
 }
 
 /* Rodapé */
 footer {
-    text-align: center;
-    padding: 20px;
-    color: #777;
+  text-align: center;
+  padding: 20px;
+  color: #777;
 }
