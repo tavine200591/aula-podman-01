@@ -1,0 +1,61 @@
+
+name: Esteira de Validacao
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  validar-html:
+    name: Validar HTML
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verificar HTML com HTMLHint
+        run: npx --yes htmlhint "**/*.html"
+
+  validar-css:
+    name: Validar CSS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verificar CSS com Prettier
+        run: npx --yes prettier --check "**/*.css"
+
+  preparar-entrega:
+    name: Preparar Entrega
+    runs-on: ubuntu-latest
+
+    needs:
+      - validar-html
+      - validar-css
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Criar pasta dist
+        run: mkdir -p dist
+
+      - name: Copiar arquivo HTML
+        run: cp index.html dist/
+
+      - name: Confirmar entrega
+        run: ls -la dist
